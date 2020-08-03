@@ -1,0 +1,9 @@
+package com.test.selenium;
+
+import org.testng.annotations.Test;
+
+public class TakeScreenshot {
+  @Test
+  public void f() {
+  }
+}

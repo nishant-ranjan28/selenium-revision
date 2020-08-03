@@ -1,0 +1,31 @@
+package com.test.selenium;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * Unit test for simple App.
+ */
+
+public class AppTest {
+	
+	static WebDriver driver = null;
+
+	public static void main(String[] args) throws InterruptedException {
+
+	}
+	
+	public static void browserURL() throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		System.out.println("Browser Successfully launched");
+
+		String url = "https://staging.aceinvoice.com/sign_in";
+		driver.get(url);
+		System.out.println("URL detected");
+	}
+	
+}
